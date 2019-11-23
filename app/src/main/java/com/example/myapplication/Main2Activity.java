@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -70,14 +71,42 @@ public class Main2Activity extends AppCompatActivity {
 //                textView.setText("finish press");
             }
         });
+
+        final float[] dX = new float[1];
+        final float[] dY = new float[1];
+        imageView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                switch (event.getAction()) {
+
+                    case MotionEvent.ACTION_DOWN:
+                        dX[0] = view.getX() - event.getRawX();
+                        dY[0] = view.getY() - event.getRawY();
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        view.animate()
+                                .x(event.getRawX() + dX[0])
+                                .y(event.getRawY() + dY[0])
+                                .setDuration(0)
+                                .start();
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        break;
+                    default:
+                        return false;
+                }
+                return true;
+            }
+        });
     }
 //    public void change(View view){
 //        switch (view.getId()){
 //            case R.id.
 //        }
 //    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item){
+//        return super.onOptionsItemSelected(item);
+//    }
 }

@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="true"
     tools:context=".activity1">
 
     <LinearLayout
@@ -14,8 +13,9 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="376dp"
-            android:layout_height="496dp"
+            android:layout_width="343dp"
+            android:layout_height="401dp"
+            android:layout_margin="20px"
             android:background="@drawable/vay"
             app:srcCompat="@drawable/vay" />
 
@@ -51,4 +51,22 @@
             android:textAllCaps="false"
             android:textStyle="normal" />
     </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true">-->
+
+<!--        <Button-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="0" />-->
+
+<!--        <Button-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="1"-->
+<!--            android:layout_weight="1" />-->
+<!--    </LinearLayout>-->
 </ScrollView>

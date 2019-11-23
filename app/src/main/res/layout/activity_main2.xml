@@ -23,7 +23,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Мои фото)))"
-                android:textSize="18sp" />
+                android:textSize="24sp"
+                android:textStyle="normal" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
